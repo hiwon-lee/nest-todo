@@ -28,3 +28,9 @@ model Post {
   author    User?    @relation(fields: [authorId], references: [id])
   authorId  Int?
 }
+
+model Todo {
+  id        Int      @default(autoincrement()) @id
+  value     String
+  isCompleted Boolean? @default(false)
+}
